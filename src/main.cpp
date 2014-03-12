@@ -828,13 +828,19 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 // https://docs.google.com/spreadsheet/ccc?key=0AvzQNj5Nex1ddEpOdTNIR09oOTViWGRlU3o3aTU2U1E&usp=sharing
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 237823 * COIN;
+    
+    int64 nSubsidy;
+
+    if (nHeight < 1136432) 
+      nSubsidy = 880000 * COIN;
+    else 
+      nSubsidy = 140000 * COIN;  // inflation blocks
 
     return nSubsidy + nFees;
 }
 
 static const int64 nTargetTimespan = 10 * 60; // 10min readjust 
-static const int64 nTargetSpacing = 30; // 30 second blocks is this too agressive?
+static const int64 nTargetSpacing = 111; // 111 seconds between new blocks
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
