@@ -7,7 +7,7 @@ You do not need specialized hardware, like mining ASICs to get your hands on Woo
 ## Technical Details
 
 ###CPU mining 
-No SHA256, no Scrypt, Wookiecoin uses six leading hashing funcitons.  
+No SHA256, no Scrypt, Wookiecoin uses six leading hashing functions.  
 
 ###Whole numbers
 There will be 1 T (1,000,000,000,000) Wookiecoins released over 4 years.  Each Wookiecoin is divisible into 100 cents.
