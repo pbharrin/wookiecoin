@@ -156,10 +156,17 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/qtipcserver.h \
     src/allocators.h \
     src/ui_interface.h \
-    src/scrypt.h \
     src/qt/miningpage.h \
     src/version.h \
-    src/qt/rpcconsole.h
+    src/qt/rpcconsole.h\
+    src/sph_blake.h \
+    src/sph_bmw.h \
+    src/sph_groestl.h \
+    src/sph_jh.h \
+    src/sph_keccak.h \
+    src/sph_skein.h \
+    src/sph_types.h \
+    src/hashblock.h 
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
@@ -219,6 +226,12 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/qtipcserver.cpp \
     src/qt/rpcconsole.cpp \
     src/scrypt.c \
+    src/blake.c \
+    src/bmw.c \
+    src/groestl.c \
+    src/jh.c \
+    src/keccak.c \
+    src/skein.c \
     src/qt/miningpage.cpp \
     src/noui.cpp
 
